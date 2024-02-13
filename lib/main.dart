@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_store/screens/home.dart';
+import 'package:music_store/screens/instrument_details.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home: const Instrument(),
     );
   }
 }
