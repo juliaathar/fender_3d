@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
+import 'package:music_store/screens/instrument_details.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,7 +14,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFDFDFD),
       appBar: AppBar(
+        automaticallyImplyLeading: false, // definido como false para evitar a seta de volta automática que vem por conta do navigator
         title: Padding(
           padding: EdgeInsets.fromLTRB(120, 0, 0, 0),
           child: Image.asset("assets/logo.png"),
@@ -87,22 +90,27 @@ class _HomeState extends State<Home> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(15),
-                          child: Container(
-                            width: 200,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color(0xffFDFDFD),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0xff150908).withOpacity(0.10),
-                                  spreadRadius: 6,
-                                  blurRadius: 10,
-                                  offset: Offset(0, 4),
-                                ),
-                              ],
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Instrument(imagePath: "assets/guitar_3d.glb", instrumentName: "Player Plus Stratocaster®",)));
+                            },
+                            child: Container(
+                              width: 200,
+                              height: 250,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Color(0xffFDFDFD),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color(0xff150908).withOpacity(0.10),
+                                    spreadRadius: 6,
+                                    blurRadius: 10,
+                                    offset: Offset(0, 4),
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset("assets/guitar.png"),
                             ),
-                            child: Image.asset("assets/guitar.png"),
                           ),
                         ),
                         SizedBox(
@@ -122,132 +130,6 @@ class _HomeState extends State<Home> {
                         )
                       ],
                     ),
-                    SizedBox(
-                      width: 24,
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Container(
-                            width: 200,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color(0xffFDFDFD),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0xff150908).withOpacity(0.10),
-                                  spreadRadius: 6,
-                                  blurRadius: 10,
-                                  offset: Offset(0, 4),
-                                ),
-                              ],
-                            ),
-                            child: Image.asset("assets/guitar.png"),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 19,
-                        ),
-                        Container(
-                          width: 124,
-                          child: Text(
-                              "Player Plus Stratocaster®",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.josefinSans(
-                                  textStyle: TextStyle(
-                                    color: Color(0xff150908),
-                                  )
-                              )
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 24,
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Container(
-                            width: 200,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color(0xffFDFDFD),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0xff150908).withOpacity(0.10),
-                                  spreadRadius: 6,
-                                  blurRadius: 10,
-                                  offset: Offset(0, 4),
-                                ),
-                              ],
-                            ),
-                            child: Image.asset("assets/guitar.png"),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 19,
-                        ),
-                        Container(
-                          width: 124,
-                          child: Text(
-                              "Player Plus Stratocaster®",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.josefinSans(
-                                  textStyle: TextStyle(
-                                    color: Color(0xff150908),
-                                  )
-                              )
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 24,
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Container(
-                            width: 200,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color(0xffFDFDFD),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0xff150908).withOpacity(0.10),
-                                  spreadRadius: 6,
-                                  blurRadius: 10,
-                                  offset: Offset(0, 4),
-                                ),
-                              ],
-                            ),
-                            child: Image.asset("assets/guitar.png"),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 19,
-                        ),
-                        Container(
-                          width: 124,
-                          child: Text(
-                              "Player Plus Stratocaster®",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.josefinSans(
-                                  textStyle: TextStyle(
-                                    color: Color(0xff150908),
-                                  )
-                              )
-                          ),
-                        ),
-                      ],
-                    )
                   ],
                 ),
               )
