@@ -130,6 +130,94 @@ class _HomeState extends State<Home> {
                         )
                       ],
                     ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Instrument(imagePath: "assets/drums_3d.glb", instrumentName: "Starcaster Drum Set® ",)));
+                            },
+                            child: Container(
+                              width: 200,
+                              height: 250,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Color(0xffFDFDFD),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color(0xff150908).withOpacity(0.10),
+                                    spreadRadius: 6,
+                                    blurRadius: 10,
+                                    offset: Offset(0, 4),
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset("assets/drums.png"),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 19,
+                        ),
+                        Container(
+                          width: 124,
+                          child: Text(
+                              "Starcaster Drum Set® ",
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.josefinSans(
+                                  textStyle: TextStyle(
+                                    color: Color(0xff150908),
+                                  )
+                              )
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Instrument(imagePath: "assets/piano_3d.glb", instrumentName: "Rhodes Mark I Piano®",)));
+                            },
+                            child: Container(
+                              width: 200,
+                              height: 250,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Color(0xffFDFDFD),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color(0xff150908).withOpacity(0.10),
+                                    spreadRadius: 6,
+                                    blurRadius: 10,
+                                    offset: Offset(0, 4),
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset("assets/piano.png"),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 19,
+                        ),
+                        Container(
+                          width: 124,
+                          child: Text(
+                              "Rhodes Mark I Piano®",
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.josefinSans(
+                                  textStyle: TextStyle(
+                                    color: Color(0xff150908),
+                                  )
+                              )
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               )
